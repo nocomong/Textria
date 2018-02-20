@@ -1,6 +1,6 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
+import AllChrData.MonsterList;
 import AllChrData.NewChr;
 import Command.Menu;
 import MapData.CommMap;
@@ -11,6 +11,7 @@ public class SampleTest {
 		NewChr chr = new NewChr();
 		Menu menu = new Menu();
 		CommMap mapData = new CommMap();
+		MonsterList mobList = new MonsterList();
 		
 
 		
@@ -41,7 +42,10 @@ public class SampleTest {
 		}
 		
 		if(command.equals("!맵정보")) {
+			
 			mapData.infoMap();
+			mobList.mobListSetMap0();
+			mobList.mobListCall();
 		}
 		
 		if(command.equals("!주변지역")) {

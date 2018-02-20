@@ -28,7 +28,7 @@ public class NewChr extends PlayerChr{
 		else if(selectClass == 2) {
 			NewRogue();
 		}else {
-			NewRogue();
+			NewArcher();
 		}
 		
 		System.out.println("캐릭터 명 : "+ getName());
