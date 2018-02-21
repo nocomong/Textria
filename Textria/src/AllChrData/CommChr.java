@@ -16,23 +16,15 @@ public class CommChr {
 	final int MAX_LEVEL = 30;
 	static int currentMapNum; //현재 맵번호
 	
-	protected int str; //힘
-	protected int sta; //체력
-	protected int dex; //손놀림
-	protected int agi; //민첩
-	protected int intelligence; //지능
-	protected int wis; //지혜
-	protected int attackSpeed; //공격속도
-	
 	protected int maxHealth; //최대 생명력
 	protected int currentHealth; //현재 생명력
 
 	
-	protected int attackPoint; //기본 공격력
+	protected int attackPoint; //공격력
 	protected int shildPoint; //방어력
 	protected int criticalPoint; //크리티컬 확률
 	protected int evadePoint; //회피율
-	
+	protected int attackSpeed; //공격속도
 	
 
 	// 기본생성자
@@ -84,53 +76,7 @@ public class CommChr {
 		this.level = level;
 	}
 
-	public int getStr() {
-		return str;
-	}
-
-	public void setStr(int str) {
-		this.str = str;
-	}
-
-	public int getSta() {
-		return sta;
-	}
-
-	public void setSta(int sta) {
-		this.sta = sta;
-	}
-
-	public int getDex() {
-		return dex;
-	}
-
-	public void setDex(int dex) {
-		this.dex = dex;
-	}
-
-	public int getAgi() {
-		return agi;
-	}
-
-	public void setAgi(int agi) {
-		this.agi = agi;
-	}
-
-	public int getIntelligence() {
-		return intelligence;
-	}
-
-	public void setIntelligence(int intelligence) {
-		this.intelligence = intelligence;
-	}
-
-	public int getWis() {
-		return wis;
-	}
-
-	public void setWis(int wis) {
-		this.wis = wis;
-	}
+	
 
 	public int getAttackSpeed() {
 		return attackSpeed;
@@ -152,8 +98,8 @@ public class CommChr {
 		return currentHealth;
 	}
 
-	public void setCurrentHealth(int currentHealth) {
-		this.currentHealth = currentHealth;
+	public void setCurrentHealth(int d) {
+		this.currentHealth = d;
 	}
 
 	public double getAttackPoint() {
@@ -195,7 +141,7 @@ public class CommChr {
 	//캐릭터 생명력 메소드
 	public void callHealth() {
 		
-		maxHealth = (int)(sta *10.37);
+//		maxHealth = (int)(level *10.37);
 		currentHealth = (int)maxHealth;
 		
 		System.out.println("생명력 ( "+maxHealth+" / "+ currentHealth+" )");
@@ -205,27 +151,24 @@ public class CommChr {
 	//캐릭터 기본공격력 메소드
 	public void chrAttackPoint() {
 		
-		setAttackPoint( (int)((str*1.5+agi*1.2+dex*0.15))*level);
+		setAttackPoint( (int)(getAttackPoint())*level);
 				
 	}
 	//캐릭터 방어력 메소드
 	public void chrShildPoint() {
-		setShildPoint((int)((sta*1.14)+(agi*1.36))*level);
+		setShildPoint((int)getShildPoint()*level);
 			
 	}
 	
 	//캐릭터 크리티컬 확률 메소드
 	public void chrCriticalPoint() {
 		
-		setCriticalPoint((int)(dex*0.14));
-		
-		
+				
 	}
 	
 	//캐릭터 회피율 메소드
 	public void chrEvadePoint() {
-		setEvadePoint((int)(agi*0.11));
-		
+
 	}
 	
 	//캐릭터 정보 호출

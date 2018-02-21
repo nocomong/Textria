@@ -109,13 +109,7 @@ public class PlayerChr extends CommChr {
 		
 			callHealth(); // 캐릭터 생명력 메소드 호출
 			
-			System.out.println("힘 : "+ str);
-			System.out.println("체력 : "+ sta);
-			System.out.println("손재주 : "+ dex);
-			System.out.println("민첩 : "+ agi);
-			System.out.println("지능 : "+ intelligence);
-			System.out.println("지혜 : "+ wis);
-			
+		
 			System.out.println("공격력 : "+ attackPoint);
 			System.out.println("방어력 : "+ shildPoint);
 			System.out.println("치명타 : "+ criticalPoint+ "%");

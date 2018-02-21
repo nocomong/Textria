@@ -65,52 +65,12 @@ public class SampleTest {
 		System.out.println("------------------------------");
 	}
 		
-
-		
-		
-//		
-//		PlayerChr chr = new PlayerChr();
-//		
-//		chr.setLevel(1);
-//		chr.setName("박진수");
-//		chr.setStr(100);
-//		chr.setSta(120);
-//		chr.setDex(70);
-//		chr.setAgi(80);
-//		chr.setIntelligence(50);
-//		chr.setWis(40);
-//		
-//		chr.chrAttackPoint();
-//		chr.chrShildPoint();
-//		chr.chrCriticalPoint();
-//		chr.chrEvadePoint();
-//		
-//		
-//		MonsterChr mob = new MonsterChr();
-//		
-//		mob.setName("오크");
-//		mob.setLevel(1);
-//		mob.setStr(80);
-//		mob.setSta(90);
-//		mob.setAgi(40);
-//		mob.setDex(30);
-//		mob.setIntelligence(10);
-//		mob.setWis(9);
-//		mob.setDropExp(20);
-//		
-//		mob.chrAttackPoint();
-//		mob.chrShildPoint();
-//		mob.chrCriticalPoint();
-//		mob.chrEvadePoint();
-//
-//		
-//		chr.chrPrintAll();
-//		mob.chrPrintAll();
-
-		
-		
+	
 
 
 	}
+	
+	
+
 
 }
